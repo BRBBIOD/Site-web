@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTU 
+    </title>
+    <style>
+        body {
+            background-color: #030303; /* gris clair */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #050505; /* gris foncé */
+            color: #ffffff; /* blanc */
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #000000; /* gris moyen */
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #ffffff; /* blanc */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #000000; /* gris foncé */
+            color: #e6e6e6; /* blanc */
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Animation pour faire tourner le logo */
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        /* Logo */
+        #logo {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            animation: rotate 5s linear infinite; /* Animation pour faire tourner */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GROUPE NTU | 99🕷️</h1>
+    </header>
+    <nav>
+        <a href="accueil.html.html">Accueil</a>
+        <a href="fsdfsd.html">Plus Grand</a>
+       
+    </nav>
+    <section id="99🕷️">
+        <img src="https://cdn.discordapp.com/attachments/1203085225379496029/1204479668632297502/IMG_9437.jpg?ex=65d4e21b&is=65c26d1b&hm=56d1f6df2e6a90fa046f70522432589128760eb455e84332914aba9d0b706762" alt="Image" style="float: left; margin-right: 20px;" width="150">
+
+    
+    </section>
+
+    <section id="bloc-note" class="note" style="background-color: black;">
+        <textarea id="note-text" rows="10" cols="50" style="background-color: black; color: white;">Écrivez vos notes ici...</textarea>
+        <br>
+        <label for="text-color-picker">Choisir la couleur de l'écriture:</label>
+        <input type="color" id="text-color-picker">
+    </section>
+
+    <section id="password-section" style="padding: 20px; text-align: center;">
+        <h2>Entrer le mot de passe</h2>
+        <form id="password-form">
+            <input type="password" id="password-input" placeholder="Mot de passe">
+            <button type="button" onclick="checkPassword()">Valider</button>
+        </form>
+        <p id="password-message"></p>
+    </section>
+
+    <footer>
+        <p>Service de Cyber Sécuritée.©</p>
+    </footer>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password-input").value;
+            if (password.toLowerCase() === "victor") {
+                // Redirection vers la page "Secret.html"
+                window.location.href = "Secret.html";
+            } else {
+    var passwordMessage = document.getElementById("password-message");
+    passwordMessage.innerText = "Mot de passe incorrect. Veuillez réessayer.";
+    passwordMessage.style.color = "red";
+}
+        }
+
+          // Fonction pour changer la couleur de l'écriture dans le bloc-notes
+          document.getElementById("text-color-picker").addEventListener("input", function() {
+            var textColorPicker = document.getElementById("text-color-picker");
+            var noteText = document.getElementById("note-text");
+            noteText.style.color = textColorPicker.value;
+        });
+
+    </script>
+    
+ <!-- Logo tournant -->
+ <img id="logo" src="https://cdn.discordapp.com/attachments/1203085225379496029/1204479668632297502/IMG_9437.jpg?ex=65d4e21b&is=65c26d1b&hm=56d1f6df2e6a90fa046f70522432589128760eb455e84332914aba9d0b706762" alt="Logo" width="50">
+
+</body>
+</html>
